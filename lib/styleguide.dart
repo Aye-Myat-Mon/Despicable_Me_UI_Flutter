@@ -33,4 +33,12 @@ class AppTheme {
     fontSize: 24,
     color: Colors.white.withOpacity(0.8),
   );
+
+  static final TextStyle smallHeading = TextStyle(
+    inherit: true,
+    fontFamily: 'WorkSans',
+    fontWeight: FontWeight.w300,
+    fontSize: 20,
+    color: Colors.white.withOpacity(0.8),
+  );
 }

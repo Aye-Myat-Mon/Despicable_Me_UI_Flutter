@@ -22,24 +22,30 @@ class _CharacterListingScreenState extends State<CharacterListingScreen> {
           ),
         ],
       ),
-      body: Column(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: 32.0, top: 8.0),
-            child: RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(text: "Despicable Me", style: AppTheme.display1),
-                    TextSpan(text: "\n"),
-                    TextSpan(text: "Character", style: AppTheme.display2),
-                  ]
-                )
-            ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(left: 32.0, top: 8.0),
+                child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(text: "Despicable Me", style: AppTheme.display1),
+                        TextSpan(text: "\n"),
+                        TextSpan(text: "Character", style: AppTheme.display2),
+                      ]
+                    )
+                ),
+              ),
+              Expanded(
+                  child: CharacterWidget()
+              ),
+            ],
           ),
-          Expanded(
-              child: CharacterWidget()
-          ),
-        ],
+        ),
       ),
     );
   }
